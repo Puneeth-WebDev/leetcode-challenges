@@ -1,0 +1,27 @@
+// java
+
+class Solution {
+    public String reverseWords(String s) {
+        String [] words = s.split(" +");
+        StringBuilder reversed = new StringBuilder();
+
+        for(int i=words.length-1; i>=0; i--){
+            reversed.append(words[i]);
+            reversed.append(" ");
+        }
+        return reversed.toString().trim();
+    }
+}
+
+
+// javascript
+
+const reverseWords = function(s) {
+    const words = s.split(/ +/);
+    let reversed = "";
+
+    for(let i= words.length-1; i>=0; i--){
+       reversed+= words[i] + " ";
+    }
+    return reversed.trim();
+};
