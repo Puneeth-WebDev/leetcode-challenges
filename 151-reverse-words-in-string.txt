@@ -1,5 +1,6 @@
-// java
+url: https://leetcode.com/problems/reverse-words-in-a-string/description/
 
+// java
 class Solution {
     public String reverseWords(String s) {
         String [] words = s.split(" +");
@@ -13,9 +14,7 @@ class Solution {
     }
 }
 
-
 // javascript
-
 const reverseWords = function(s) {
     const words = s.split(/ +/);
     let reversed = "";
@@ -25,3 +24,4 @@ const reverseWords = function(s) {
     }
     return reversed.trim();
 };
+
