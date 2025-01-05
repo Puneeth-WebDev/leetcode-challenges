@@ -1,0 +1,36 @@
+
+url: https://leetcode.com/problems/valid-palindrome
+
+// java
+class Solution {
+    public boolean isPalindrome(String s) {
+        String formatted = s.toLowerCase().replaceAll("[^A-Za-z0-9]", "");
+        int left = 0;
+        int right = formatted.length()-1;
+
+        while(left<right){
+            if(formatted.charAt(left) != formatted.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
+
+// javascript
+const isPalindrome = (s) => {
+    let filtered = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    let left = 0;
+    let right = filtered.length - 1;
+
+    while (left < right) {
+        if (filtered[left] !== filtered[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
